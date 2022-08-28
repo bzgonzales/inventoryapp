@@ -1,0 +1,285 @@
+@font-face{
+	font-family: 'Montserrat-SemiBold';
+	src: url('../fonts/Montserrat-SemiBold.otf');
+}
+@font-face{
+	font-family: 'Montserrat-Regular';
+	src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face{
+	font-family: 'Montserrat-Light';
+	src: url('../fonts/Montserrat-Light.ttf');
+}
+
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../fonts/HelveticaNeue.ttf');
+}
+
+@font-face{
+	font-family: 'Helvetica-SemiBold';
+	src: url('../fonts/HelveticaNeueBd.ttf');
+	font-weight: bold;
+}
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../fonts/HelveticaNeue Thin.ttf');
+	font-weight: lighter;
+}
+@font-face{
+	font-family: 'Helvetica-Light';
+	src: url('../fonts/HelveticaNeue Light.ttf');
+	font-weight: lighter;
+}
+
+/******* VARIABLES *******/
+
+	/* Colors */
+	$white : #fff;
+	$black : #000000;
+	$yellow : #f6af25;
+	$gray : #3A3A3C;
+	$lightGray : #cacaca;
+	$lightLightGray : #e2e2e2;
+	$blue : #4c8de7;
+	$transBlue : rgba(76,141,231, 0.8);
+	$red : #ba0808;
+	$transBlack: rgba(0, 0, 0, 0.8);
+	$transBlackLight: rgba(0, 0, 0, 0.55);
+	$grayShadow: rgba(0, 0, 0, 0.117647);
+
+	/* Font Sizes */
+	$h1MainFold : 65px;
+	$h2 : 40px;
+	$h3 : 28px;
+	$h4 : 21px;
+	$t-mini : 14px;
+	$content : 16px;
+
+/******* END OF VARIABLES *******/
+
+
+
+/* Global Classes */
+	body{
+		font-family: 'Montserrat-Regular', sans-serif;
+		letter-spacing: .5px;
+	}
+
+	ul{margin: 0; padding: 0;}
+	ul li{list-style-type: none;}
+
+	a{color: $yellow;}
+	a:hover{color: $yellow; opacity: .9; text-decoration: none;}
+
+	/* Font Sizes */
+	h1,h2,h3,h4,h5{word-break: break-word;}
+	h1.h1-main-fold{font-family: 'Helvetica-SemiBold'; font-size: $h1MainFold; line-height: $h1MainFold; text-transform: uppercase;}
+	h2{font-family: 'Helvetica-SemiBold'; font-size: $h2; line-height: $h2; word-break: break-word;}
+	h2.h2-small{font-size: $h3; line-height: $h3;}
+	h3{font-size: $h3; line-height: $h3;}
+	h4{font-family: 'Helvetica-SemiBold'; font-size: $h4; line-height: $h4 + 2px;}
+	.t-h2{font-size: $h2;}
+	.h1-teaser{font-size: $h3; line-height: $h3;}
+	.h1-normal{font-size: $content; line-height: $content;}
+	.t-mini{font-size: $t-mini;}
+
+	/* Font Colors */
+	.c-yellow{color: $yellow;}
+	.c-white{color: $white;}
+	.c-black{color: $black;}
+	.c-gray{color: $gray;}
+	.c-red{color: $red;}
+
+	/* Font Style */
+	.t-bold{font-weight: 500;}
+	.t-light{font-family: "Helvetica-Light", sans-serif;}
+
+	/* Margins */
+	.margin-10{margin-top: 10px;}
+	.margin-30{margin: 30px 0;}
+
+	/* Height */
+	.h80{height: 80vh;}
+	.h90{height: 80vh;}
+	.h10{height: 80vh;}
+
+	/* Main Padding */
+	.section-padding{padding: 80px 0;}
+
+	/* Form */
+	input,textarea,select{
+		background: transparent;
+		border: 1px solid $gray;
+		/*font-family: "Montserrat";	*/
+		font-family: "Helvetica";	
+		margin: 5px 0;
+		padding: 12px 15px;
+		width: 100%;
+	}
+	select{
+		background-image: linear-gradient(45deg,transparent 50%,gray 50%),linear-gradient(135deg,gray 50%,transparent 50%);
+	    background-position: -webkit-calc(100% - 20px) -webkit-calc(1em + 6px),-webkit-calc(100% - 15px) -webkit-calc(1em + 6px);
+	    background-size: 5px 5px, 5px 5px;
+	    background-repeat: no-repeat;
+	    -webkit-appearance: none;
+	    border: 1px solid $gray;
+	}
+	textarea{resize: none; width: 100%;}
+	button{border: 0; margin: 10px 0; border-radius: 0}
+	button:hover{cursor: pointer;}
+
+	/* Buttons */
+	.button{font-size: $t-mini; padding: 10px 25px;}
+	.btn-yellow{
+		background-color: $yellow;
+		border: 1px solid $yellow;
+		color: $gray;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.btn-load-more{background-color: $yellow; color: $white;}
+	.btn-load-more:hover{color: $white;}
+	.btn-yellow:hover{color: $gray;}
+	.btn-transparent{background: transparent; border: 1px solid $white;}
+	.btn-view-all{
+		background-color: $yellow;
+		color: $gray;
+		display: block;
+		margin: 0 auto;
+		padding: 10px 15px; 
+		text-align: center;
+		text-transform: uppercase;
+		/*width: 150px;*/
+		width: 224px;
+	}
+	.btn-view-all:hover{color: $gray;}
+	.btn-border-white{
+		background: transparent;
+		border: 1px solid $white; 
+		color: $white; 
+	}
+	.btn-border-black{
+		border: 1px solid $black;
+		color: $black;
+	}
+	.btn-border-black:hover{background-color: $yellow; border: 1px solid $yellow; color: $white;}
+
+	/* MMENU */
+
+	.mm-menu .mm-opened .mm-pagedim-black~#mm-blocker {
+	    background: $white;
+	}
+
+
+	/* For Testing */
+	.border-me{
+		border: 1px solid black;
+	}
+
+	/* Owl Carousel */
+	.owl-dots{			
+		.active > span{background-color: $yellow !important;}
+	}
+	.owl-prev-custom,.owl-next-custom{
+		color: $white !important; 
+		background: rgba(255,255,255,0.3)!important; 
+		border-radius: 0 !important;
+		padding: 10px 15px !important;
+	}
+
+
+	/* Blog Date */
+	p.blog-date{color: $gray; font-size: $t-mini;}
+
+	.center-title{
+		margin-bottom: 30px;
+		text-align: center; 
+		width: 100%;
+	}
+	.center-me{margin: 0 auto;}
+
+	.max-1600{margin: 0 auto; max-width: 1600px;}
+
+	.clearme{clear: both;}
+
+	.white-line{
+		background-color: $white;
+		height: 2px;
+		margin: 30px 0;
+		width: 35%;
+	}
+	.line-tear{
+		background: url('../images/line-tear.png') no-repeat  50% 5px;
+		bottom: 0;
+		height: 45px;
+		position: absolute;
+	    width: 100%;
+	}
+
+	/* Hover */
+	/* Fade */
+	.hvr-fade {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  overflow: hidden;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-property: color, background-color;
+	  transition-property: color, background-color;
+	}
+	.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+	  background-color: $yellow !important;
+	  border: 1px solid $yellow !important;
+	  color: white !important;
+	}
+
+/* End Global Classes */
+
+.bootstrap-select.show-tick{
+	width:100%!important
+}
+.input-group>.form-control{
+	margin:0;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1412px){
+
+}
+
+@media only screen and (max-width: 1199px){
+	
+}
+
+@media only screen and (max-width: 991px){
+	
+
+}
+
+@media only screen and (max-width: 980px){
+
+}
+@media only screen and (max-width: 767px){
+	
+}
+
+@media only screen and (max-width: 575px){
+
+}
+
+@media only screen and (max-width: 470px){
+	
+}
+
+@media only screen and (max-width: 425px){
+	
+}
+
+@media only screen and (max-width: 375px){
+	
+}
